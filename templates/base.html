@@ -1,0 +1,229 @@
+<!-- This Code was published and authorised by Tanbir Pradhan. You can't use on your own project. -->
+
+
+<!doctype html>
+<!--[if IE 9]> <html class="no-js ie9 fixed-layout" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js " lang="en"> <!--<![endif]-->
+<head>
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Mobile Meta -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Site Meta -->
+    <title>Panda Pixels</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/mainicon.png') }}" type="image/png" />
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='images/apple-touch-icon.png') }}">
+
+	<!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- Custom & Default Styles -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/carousel.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+ 
+    
+
+</head>
+<body>  
+
+    <!-- LOADER -->
+    <div id="preloader">
+        <img class="preloader" src="{{ url_for('static', filename='images/loader.gif') }}" alt="...">
+        <h4>Loading...</h4>
+    </div><!-- end loader -->
+    <!-- END LOADER -->
+
+    <div id="wrapper">
+        <header class="header">
+            <div class="topbar clearfix">
+                <div class="container">
+                    <div class="row-fluid">
+                        <div class="col-md-6 col-sm-6 text-middle">
+                            <p>
+                                <a href="/">pandapixels@gmail.com</a>
+                            </p>
+                        </div><!-- end left -->
+                        <div class="col-md-6 col-sm-6 hidden-xs text-right">
+                            <div class="social">
+                            </div><!-- end social -->
+                        </div><!-- end left -->
+                    </div><!-- end row -->
+                </div><!-- end container -->
+            </div><!-- end topbar -->
+
+            <div class="container">
+                <nav class="navbar navbar-default yamm">
+                    <div class="navbar-header">
+                        
+                        <div class="logo-normal">
+                            <a class="navbar-brand" href="/"><img src="{{ url_for('static', filename='images/logo.png') }}" alt=""></a> 
+                            <!-- pandpixels logo here -->
+                        </div>
+                    </div>
+                    
+                    <!-- ++++++++++++++++++++++++++++++ NAVBAR +++++++++++++++++++++++++++++++++++++ -->
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="/">Home</a></li>                                                                                       
+                            <li><a href="/Videos">Videos</a></li>                                              
+                            <li><a href="/Models">Models</a></li>
+                            <li><a href="/Admin">Admin</a></li>
+                    
+                        </ul>
+                    </div>
+                </nav><!-- end navbar -->
+            </div><!-- end container -->
+        </header>
+
+
+
+
+    {% block content %} 
+    {% endblock %} 
+
+
+
+
+
+
+
+
+<section class="section bgcolor1">
+    <div class="container">
+        <a href="https://www.youtube.com/@PandaPixelsss">
+        <div class="row callout">
+            <div class="col-md-4 text-center">
+                <h3>{{ nosub }}+</h3>
+                <h4>Total Subscribers of Panda Pixels channel</h4>
+            </div><!-- end col -->
+            <div class="col-md-4 text-center">
+                <h3>{{ noview }}+</h3>
+                <h4>Total Views of Panda Pixels channel</h4>
+            </div><!-- end col -->
+            <div class="col-md-4 text-center">
+                <h3>{{ novid }}</h3>
+                <h4>Total Videos of Panda Pixels channel</h4>
+            </div><!-- end col -->
+        </div><!-- end row -->
+        </a>
+    </div><!-- end container -->  
+</section>
+
+<footer class="section footer noover">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4">
+                <div class="widget clearfix">
+                    <h3 class="widget-title">Connect with Email.</h3>
+                    <div class="newsletter-widget">
+                        <p>You can send E-mails using this box.<br>Enter your Mail address here.</p>
+                        <form class="form-inline" role="search">
+                            <div class="form-1">
+                                <input type="text" class="form-control" placeholder="Enter your mail address..">
+                                <button type="submit" class="btn btn-primary"><ion-icon name="rocket-outline"></ion-icon></button>
+                            </div>
+                        </form>
+                    </div><!-- end newsletter -->
+                </div><!-- end widget -->
+            </div><!-- end col -->
+
+            <div class="col-lg-3 col-md-3">
+                <div class="widget clearfix">
+                    <h3 class="widget-title">Join us today</h3>
+                    <p>Would you like to be permanent member of our team? Join us without losing time.</p>
+                    <a href="#" class="readmore">Get Our Membership </a>
+                </div><!-- end widget -->
+            </div><!-- end col -->
+
+            <div class="col-lg-3 col-md-3">
+                <div class="widget clearfix">
+                    <h3 class="widget-title">Popular Tags</h3>
+                    <div class="tags-widget">   
+                        <ul class="list-inline">
+                            <li><a href="/">Panda Pixels</a></li>
+                            <li><a href="https://www.blender.org/">Blender</a></li>
+                            <li><a href="https://en.wikipedia.org/wiki/3D_modeling">Modeling</a></li>
+                            <li><a href="https://unity.com/solutions/what-is-3d-animation#:~:text=3D%20animation%20is%20the%20process,moving%20through%20a%203D%20space.">3D Animations </a></li>
+                            <li><a href="https://prisma3d.net/">Prisma 3D</a></li>
+                            <li><a href="https://sketchfab.com/3d-models">Sketchfab</a></li>
+                            <li><a href="https://www.autodesk.in/products/maya/overview?term=1-YEAR&tab=subscription">Auto-Desk Maya</a></li>
+                            <li><a href="https://www.blender.org/features/sculpting/">Sclupturing</a></li>
+                            <li><a href="https://www.youtube.com/@scimuphilelab7693">Scimuphile</a></li>
+                            <li><a href="https://www.youtube.com/@RemoteAnimations">Remote Animation</a></li>
+                            <li><a href="https://www.maxon.net/en/cinema-4d">Cinema 4D</a></li>
+                            <li><a href="https://en.wikipedia.org/wiki/Motion_graphics">Motion Graph</a></li>
+                        </ul>
+                    </div><!-- end list-widget -->
+                </div><!-- end widget -->
+            </div><!-- end col -->
+
+            <div class="col-lg-2 col-md-2">
+                <div class="widget clearfix">
+                    <h3 class="widget-title">Support</h3>
+                    <div class="list-widget">   
+                        <ul>
+                            <li><a href="/Models">Our Models</a></li>
+                            <li><a href="/Videos">Our Videos</a></li>
+                            <li><a href="https://www.youtube.com/@PandaPixelsss">Our Channel</a></li>
+                            <li><a href="https://www.youtube.com/@PandaPixelsss/about">Contact_Us</a></li>
+                            <li><a href="https://en.wikipedia.org/wiki/Copyright">Copyrights</a></li>
+                            <li><a href="https://www.youtube.com/@PandaPixelsss/about">Terms of Use</a></li>
+                        </ul>
+                    </div><!-- end list-widget -->
+                </div><!-- end widget -->
+            </div><!-- end col -->
+        </div><!-- end row -->
+    </div><!-- end container -->
+</footer><!-- end footer -->
+
+<div class="copyrights">
+    <div class="container">
+        <div class="clearfix">
+            <div class="pull-left">
+                <div class="cop-logo">
+                    <a href="/"><img src="{{ url_for('static', filename='images/logo.png') }}" alt=""></a>
+                </div>
+            </div>
+
+            <div class="pull-right">
+                <div class="footer-links">
+                    <ul class="list-inline">
+                        <li>Distributed by : <a href="https://www.youtube.com/@scimuphilelab7693" class="imp_name">Scimuphile_Lab</a></li>
+                        <li>Design & Developed by : <a href="https://www.linkedin.com/in/tanbir-pradhan-545376222/" target="_blank" class="imp_name">Tanbir Pradhan</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div><!-- end container -->
+</div><!-- end copy -->
+</div><!-- end wrapper -->
+
+
+<!-- jQuery Files -->
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/carousel.js') }}"></script>
+<script src="{{ url_for('static', filename='js/animate.js') }}"></script>
+<script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+<!-- VIDEO BG PLUGINS -->
+<script src="{{ url_for('static', filename='js/videobg.js') }}"></script>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

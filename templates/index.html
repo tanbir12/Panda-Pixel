@@ -1,0 +1,332 @@
+<!-- This Code is Published by Tanbir Pradhan. Don't use it in your project. -->
+
+{%extends "base.html" %} 
+{%block content%} 
+  
+        <section id="home" class="video-section js-height-full">
+            <div class="overlay"></div>
+            <div class="home-text-wrapper relative container">
+                <div class="home-message">
+                    <p>Panda Pixels</p>
+                    <small>Panda Pixels is a youtube channel, where you can find video tutorials and contents regarding 3D Modeling, Texturing and Animations using Prisma 3D application. This website provide you direct access to all Videos and Models.<br> All These Models are copyright free.</small>
+                    <div class="btn-wrapper">
+                        <div class="text-center">
+                            <a href="https://www.youtube.com/@PandaPixelsss/" class="btn btn-primary wow slideInLeft">Youtube</a> &nbsp;&nbsp;&nbsp;<a href="https://play.google.com/store/search?q=prisma%203d&c=apps&hl=en&gl=US" class="btn btn-default wow slideInRight">Prisma 3D</a>
+                        </div>
+                    </div><!-- end row -->
+                </div>
+            </div>
+            <div class="slider-bottom">
+                <span>Scroll Down</span>
+                <ion-icon name="chevron-down-circle-outline"></ion-icon>
+            </div>
+        </section>
+
+        <section class="section appear" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 hidden-sm hidden-xs">
+                        <div class="custom-module">
+                            <img src="{{ url_for('static', filename='images/pandadance.gif') }}" alt="" class="img-responsive wow slideInLeft">
+                        </div><!-- end module -->
+                    </div><!-- end col -->
+                    <div class="col-md-8">
+                        <div class="custom-module p40l">
+                            <h2>I believe in <mark>Practical Learning System.</mark> 
+                               So always try to apply your skills.
+                           </h2>
+
+                            <p>Panda Pixels helps you to learn and create the virtual 3D world by video tutorials. There are some viewers see the result part of video and skip all other part that demotivate me Because It takes lot of effort to create those.<br><mark>[ Note ]</mark> Essential skills for 3D VFX artist.</p>
+
+                            <hr class="invis">
+
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 first">
+                                    <ul class="check">
+                                        <li>3D Modeling</li>
+                                        <li>Texturing</li>
+                                        <li>Animations</li>
+                                        <li>VFX Simulations</li>
+                                        <li>Compositing</li>
+                                    </ul><!-- end check -->
+                                </div><!-- end col-lg-4 -->
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                    <ul class="check">
+                                        <li>Lighting and Rendering</li>
+                                        <li>Special Effects</li>
+                                        <li>Visual Problem-Solving</li>
+                                        <li>Attention to Details</li>
+                                        <li>Software Proficiency</li>
+                                    </ul><!-- end check -->    
+                                </div><!-- end col-lg-4 -->
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 last">
+                                    <ul class="check">
+                                        <li>Collaboration</li>
+                                        <li>Continuois Learning</li>
+                                        <li>Portfolio development</li>
+                                        <li>Time Management</li>
+                                        <li>Communication skills</li>
+                                    </ul><!-- end check -->
+                                </div><!-- end col-lg-4 --> 
+                            </div><!-- end row -->   
+
+                            <hr class="invis">
+
+                            <div class="btn-wrapper">
+                                <a href="https://www.youtube.com/@PandaPixelsss/about" class="btn btn-primary">Learn More About us</a>
+                            </div>
+
+                        </div><!-- end module -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </section>
+
+
+
+        <!-- ++++++++++++++++++++++++++++++++++  Recent Models  ++++++++++++++++++++++++++++++++++ -->
+        <section class="section gb">
+            <div class="container appear">
+                <div class="section-title text-center">
+                    <h3>Recent Models</h3>
+                    <p>These 3D Models are open source, it means you can use them in your project work without any problem. Don't worry about the copyright claim. You can download these models from here or Video descriptions. Start your project from today.</p>
+                </div><!-- end title -->
+
+                
+                <div id="owl-01" class="owl-carousel owl-theme owl-theme-01">
+                    
+                    <div class="caro-item">
+                        {% for item in dbs %}    
+                        <div class="course-box">
+                            <div class="image-wrap entry">
+                                <img src= "{{ url_for('static', filename='Model_Images/'+item.file_img ) }}" alt="" class="img-responsive">
+                            </div><!-- end image-wrap -->
+                            <div class="course-details">
+                                <h4>
+                                    <a href= '{{ item.file_link }}' title="">{{ item.file_name }}</a>
+                                </h4>
+                                <p>Click Here To Download.</p>
+                                </div><!-- end details -->
+                            <div class="course-footer clearfix">
+                                <div class="pull-left">
+                                    <ul class="list-inline">
+                                        <a href= '{{ item.file_link }}' class="btn-download btn-primary wow ">Download</a>
+                                        <li> Id : {{ item.id }}</li>
+                                    </ul>
+                                </div><!-- end left -->
+                                </div><!-- end left -->
+                            </div><!-- end footer -->
+                        </div><!-- end box -->
+                        {% endfor %}    
+                        
+                    
+                    </div><!-- end col -->
+                            
+                        
+                        </div><!-- end col -->
+                    
+                
+                </div>
+
+                <hr class="invis">
+
+                <div class="section-button text-center">
+                    <a href="/Models" class="btn btn-primary">View All Models</a>
+                </div>
+            </div><!-- end container -->
+        </section>
+
+
+        <!-- ++++++++++++++++++++++++++++++++++  Black Divison  ++++++++++++++++++++++++++++++++++++ -->
+        <section class="section db p120">
+            <div class="container">
+                <div class="row appear">
+                    <div class="col-md-12">
+                        <div class="tagline-message text-center">
+                            <h3>The applications which I use in my videos.</h3>
+                            <p>I create all these projects in a single phone. So you can do it. Don't give any excuse to yourself.</p>
+                        </div>
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </section><!-- end section -->
+
+        <section class="section gb nopadtop">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="box m30 appear">
+                            <img src="{{ url_for('static', filename='images/capcut.png') }}" class="app-logo" alt="">
+                            <h4>Capcut</h4>
+                            <p>An open-source video editing app best for speed_ramping ,  color-grading and key_frame animations.</p>
+                            <a href="https://www.capcut.com/" class="readmore">Read more</a>
+                        </div>
+                    </div><!-- end col -->
+
+                    <div class="col-md-6">
+                        <div class="box m30 appear">
+                            <img src="{{ url_for('static', filename='images/prisma3d.png') }}" class="app-logo"  alt="">
+                            <h4>Prisma 3D</h4>
+                            <p>Prisma3D is a free Android app that allows you to develop designs on your mobile phone from anywhere. With several useful features like modeling, rigging, and animation, Prisma3D is an interesting and fun app to work with.</p>
+                            <a href="https://prisma3d.net/" class="readmore">Read more</a>
+                        </div>
+                    </div><!-- end col -->
+
+                    <div class="col-md-3">
+                        <div class="box m30 appear">
+                            <img src="{{ url_for('static', filename='images/flipaclip.jpeg') }}" class="app-logo"  alt="">
+                            <h4>FlipaClip</h4>
+                            <p>FlipaClip is a powerful app that lets you create impressive 2d animation on your smartphone or tablet.</p>
+                            <a href="https://support.flipaclip.com/hc/en-us" class="readmore">Read more</a>
+                        </div>
+                    </div><!-- end col -->
+                </div><!-- end row -->
+
+                <hr class="invis">
+            </div><!-- end container -->
+        </section>
+        
+        <!-- ++++++++++++++++++++++++++++++++  Recent Videos  +++++++++++++++++++++++++++++++++++++++ -->
+        <section class="section gb">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h3>Recent Videos</h3>
+                    <p>These are some videos of our youtube channel. If you really like these videos then go to the channel page and subscribe our channel. Each like and subscribe motivate us thousand times.</p>
+                </div><!-- end title -->
+
+
+                <div class="row">
+                    {% for item in items %}
+                    <div class="col-lg-4 col-md-12">
+                        <div class="blog-box appear">
+                            <a href='https://www.youtube.com/watch?v={{ item[2] }}'>
+                            <div class="image-wrap entry">
+                                <img src= '{{ item[0] }}' alt="" class="img-responsive">
+                            </div><!-- end image-wrap -->
+
+                            <div class="blog-desc">
+                                <h4><a href='https://www.youtube.com/watch?v={{ item[2] }}'>{{ item[1] }}</a></h4>
+                                <p>Click To Play.</p>
+                            </div><!-- end blog-desc -->
+
+                            <div class="post-meta">
+                                <ul class="list-inline">
+                                    <li>{{ item[3][:10] }}</li> 
+                                    <li>Video by PandaPixels.</li>
+                                </ul>
+                            </div><!-- end post-meta -->
+                            </a>
+                        </div><!-- end blog -->
+                    </div><!-- end col -->
+                    {% endfor %}
+    
+                </div><!-- end row -->
+                <div class="section-button text-center">
+                    <a href="/Videos" class="btn btn-primary">More Videos</a>
+                </div>
+
+            </div><!-- end container -->
+        </section>
+
+
+        <!-- ++++++++++++++++++++++++++++++++  COMMENT SECTION  +++++++++++++++++++++++++++++++++++ -->
+        <section class="section">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h3>...Best Comments...</h3>
+                    <p>These comments are like reward for my hard work. I spent much time to learn and apply my skill on these videos.<br> I relly thankful to all my subscribers for their appreciations.</p>
+                </div><!-- end title -->
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="box testimonial">
+                            <p class="testiname"><strong><img src="{{ url_for('static', filename='upload/testimonial_01.png') }}" alt="" class="img-circle">@tropicalmusic9027</strong></p>
+                            <p>I was shocked when I saw, that you made this animation on the phone better than me on the computer.</p>
+                            <div class="rating">
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                            </div>
+                        </div><!-- end testimonial -->
+                    </div><!-- end col -->
+
+                    <div class="col-md-4">
+                        <div class="box testimonial">
+                            <p class="testiname"><strong><img src="{{ url_for('static', filename='upload/testimonial_02.png') }}" alt="" class="img-circle">@RemoteAnimations</strong></p>
+                            <p>Nice Bro</p>
+                            <div class="rating">
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star-half"></ion-icon>
+                            </div>
+                        </div><!-- end testimonial -->
+                    </div><!-- end col -->
+
+                    <div class="col-md-4">
+                        <div class="box testimonial">
+                            <p class="testiname"><strong><img src="{{ url_for('static', filename='upload/testimonial_03.png') }}" alt="" class="img-circle">@winterforest2467</strong></p>
+                            <p>I thought we can't make realistic animation on phone but you proved me wrong.</p>
+                            <div class="rating">
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                            </div>
+                        </div><!-- end testimonial -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="box testimonial">
+                            <p class="testiname"><strong><img src="{{ url_for('static', filename='upload/testimonial_04.png') }}" alt="" class="img-circle">@AAK_Channel</strong></p>
+                            <p>Showing Your Render before you start the video increase the viewers interest and causes to watch till the end of the video.</p>
+                            <div class="rating">
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star-half"></ion-icon>
+                            </div>
+                        </div><!-- end testimonial -->
+                    </div><!-- end col -->
+
+                    <div class="col-md-4">
+                        <div class="box testimonial">
+                            <p class="testiname"><strong><img src="{{ url_for('static', filename='upload/testimonial_05.png') }}" alt="" class="img-circle">@HarnaiDigital</strong></p>
+                            <p>Dude this was wild. The fact that you recreated the set entirely from scratch shwos that you are way better in 3D. I enjoyed watching the breakdown.</p>
+                            <div class="rating">
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star-half"></ion-icon>
+                            </div>
+                        </div><!-- end testimonial -->
+                    </div><!-- end col -->
+
+                    <div class="col-md-4">
+                        <div class="box testimonial">
+                            <p class="testiname"><strong><img src="{{ url_for('static', filename='upload/testimonial_06.png') }}" alt="" class="img-circle">@fmaf6574</strong></p>
+                            <p>Bro I am from Pakistan. Although I am your competitor by Nation. But Your tutorials are very impressive. I love you bro.</p>
+                            <div class="rating">
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                            </div>
+                        </div><!-- end testimonial -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </section>
+
+
+
+
+{% endblock %}
