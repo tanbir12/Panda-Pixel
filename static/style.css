@@ -1238,7 +1238,7 @@ TESTIMONIAL
     line-height: 90px;
     margin-top: 0;
     color: #ffffff;
-    font-weight: 900;
+    font-weight: 800;
 }
 
 .callout h4 {
@@ -1756,6 +1756,17 @@ RESPONSIVE
 @media (max-width: 468px) {
     .blog-meta h3 {
         font-size: 20px;
+    }
+    
+    .callout h3{
+        font-size: 60px;
+        line-height: 90px;
+        margin-top: 0;
+        color: #ffffff;
+        font-weight: 500;
+    }
+    .callout h4{
+        font-size: 16px;
     }
 }
 
