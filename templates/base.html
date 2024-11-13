@@ -47,7 +47,7 @@ crossorigin="anonymous"></script>
     <!-- LOADER -->
     <div id="preloader">
         <img class="preloader" src="{{ url_for('static', filename='images/loader.gif') }}" alt="...">
-        <h4>Loading...</h4>
+        <h4>Panda Is Loading...</h4>
     </div><!-- end loader -->
     <!-- END LOADER -->
 
@@ -56,10 +56,7 @@ crossorigin="anonymous"></script>
             <div class="topbar clearfix">
                 <div class="container">
                     <div class="row-fluid">
-                        <div class="col-md-6 col-sm-6 text-middle">
-                            <p>
-                                <a href="/">pandapixels@gmail.com</a>
-                            </p>
+                        <div class="col-md-6 col-sm-6 text-middle">                  
                         </div><!-- end left -->
                         <div class="col-md-6 col-sm-6 hidden-xs text-right">
                             <div class="social">
@@ -71,8 +68,13 @@ crossorigin="anonymous"></script>
 
             <div class="container">
                 <nav class="navbar navbar-default yamm">
+                    <button type="button" class="navbar-toggle collapsed menu-button" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
                     <div class="navbar-header">
-                        
+
                         <div class="logo-normal">
                             <a class="navbar-brand" href="/"><img src="{{ url_for('static', filename='images/logo.png') }}" alt=""></a> 
                             <!-- pandpixels logo here -->
@@ -228,6 +230,5 @@ crossorigin="anonymous"></script>
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
 </body>
 </html>
