@@ -178,7 +178,7 @@ def GET_Value():
             
             return "Uploaded Successfully...."
 
-    return render_template('Upload.html')
+    return render_template('upload.html')
 
 
 
