@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- This Code is Published by Tanbir Pradhan. Don't use it in your project. -->
+
+<head>
+  <meta charset="UTF-8">
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Upload Files</title>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='images/mainicon.png') }}" type="image/png" />
+
+ <style>
+   
+body {
+  margin:0px;
+  height:100vh;
+  background: #ecf0f3;
+}
+.center {
+  width: 100%;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.form-input {
+    max-width: 350px;
+    min-height: 400px;
+    margin: 80px auto;
+    padding: 30px 50px 30px 50px;
+    background-color: #ecf0f3;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+}
+.form-input input {
+  display:none;
+
+}
+.form-input label {
+  display:block;
+  width:65%;
+  height:35px;
+  text-align:center;
+  background:#1f84d6;
+  color:#fff;
+  font-size:13px;
+  padding: 10px 10px 0px 10px;
+  font-family:"Open Sans",sans-serif;
+  text-transform:Uppercase;
+  font-weight:500;
+  border-radius:5px;
+  cursor:pointer;
+  box-shadow: 3px 3px 3px #b1b1b1,
+        -3px -3px 3px #fff;
+}
+.form-input label:hover{
+    background-color: #1571bd;
+}
+
+.form-input img {
+  width:100%;
+  display:none;
+  margin-bottom:30px;
+}
+
+.model_div{
+  width: 100%;
+  margin-top: 3vh;
+  display: flex;
+  padding: 0px 10px 10px 10px;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e3e7ec;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px #b1b1b1,s
+        -3px -3px 3px #fff;
+}
+.model_div h3{
+  font-family: sans-serif;
+  color: #6e6e6e;
+  font-size: 25px;
+}
+
+#model_id{
+  width: 90%;
+  height: 5vh;
+  display: block;
+  border-radius: 15px;
+  border: 2px solid #065c9e;    
+  box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+}
+.btn{
+  width: 80%;
+  height: 40px;
+  margin-top: 20%;
+  border-radius: 15px;
+  color: #ffffff;
+  background-color: #1f84d6;
+  border: none;
+  box-shadow: 3px 3px 3px #b1b1b1,
+        -3px -3px 3px #fff;
+}
+.btn:active{
+  background-color: #043357;  
+  
+}
+.link{
+  width: 80%;
+  height: 40px;
+  margin-top: 20%;
+  border-radius: 15px;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 20px; 
+  text-decoration: none;
+  font-family: sans-serif;
+  background-color: #1f84d6;
+  border: none;
+  box-shadow: 3px 3px 3px #b1b1b1,
+        -3px -3px 3px #fff;
+}
+   
+</style>
+
+</head>
+<body>
+    <form method="post" enctype="multipart/form-data">
+    <div class="center">
+        <div class="form-input">
+            <div class="model_div">
+              <h3>Delete Model</h3>
+              <input type="text" name="model_id" id="model_id" placeholder="Enter Model ID...">
+            </div>
+            <div class="model_div">
+                <button class="btn" type="submit">Delete</button>
+                <a href="/Upload" class="link" >UPLOAD PAGE</a>
+            </div>
+        </div>
+    </div>
+    </form> 
+</body>
+</html>
