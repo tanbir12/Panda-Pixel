@@ -12,10 +12,16 @@ from googleapiclient.discovery import build
 
 
 #+++++++++++++++++++++++++++ CONFIGURE ++++++++++++++++++++++++++++++++++++++++++
-app.config ['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///pandapixels.sqlite3'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
+app.config ['SQLALCHEMY_DATABASE_URI'] = os.getenv('Database_Uri')
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 
+# import .env file
+from dotenv import load_dotenv
+load_dotenv()
+Username = os.getenv('Admin')
+Password = os.getenv('Password')
+api_key = os.getenv('API_KEY')
 
 #++++++++++++++++++++++++++++ DATABASE AREA ++++++++++++++++++++++++++++++++++++++
 db = SQLAlchemy(app)
@@ -37,9 +43,6 @@ class filedbs(db.Model):
 # with app.app_context():
 #         db.create_all()
 
-
-#___________________Api key________________________
-api_key = 'AIzaSyBNUon-AZsjSKXpTzcCN7ZS3up9RyuVi4A'
 
 
 # Create YouTube Object
@@ -152,7 +155,7 @@ def Admin_Auth():
         username = request.form.get("userName")
         password = request.form.get("password")
 
-        if(username == "ommpratyush" and password == "6371704944"):
+        if(username == Username and password == Password):
             return redirect(url_for('GET_Value'))
         else :
             return render_template("index.html")
