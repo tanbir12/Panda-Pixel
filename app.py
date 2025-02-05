@@ -40,8 +40,8 @@ class filedbs(db.Model):
 
 
 # ++++++++++++++++++++++++++++++    For Creating The Database db  ++++++++++++++++++++++++++++++++++
-# with app.app_context():
-#         db.create_all()
+with app.app_context():
+        db.create_all()
 
 
 
