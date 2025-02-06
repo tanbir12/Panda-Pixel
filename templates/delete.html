@@ -89,10 +89,11 @@ body {
 
 #model_id{
   width: 90%;
-  height: 5vh;
+  height: 3vh;
   display: block;
-  border-radius: 15px;
-  border: 2px solid #065c9e;    
+  border-radius: 8px;
+  padding : 5px 10px;
+  border: 1px solid #31383b;    
   box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
 }
 .btn{
@@ -101,18 +102,21 @@ body {
   margin-top: 20%;
   border-radius: 15px;
   color: #ffffff;
-  background-color: #1f84d6;
+  background-color: #e43434;
   border: none;
+  cursor: pointer;
   box-shadow: 3px 3px 3px #b1b1b1,
         -3px -3px 3px #fff;
 }
+.btn:hover{
+  background-color: red;
+}
 .btn:active{
   background-color: #043357;  
-  
 }
 .link{
   width: 80%;
-  height: 40px;
+  height: 35px;
   margin-top: 20%;
   border-radius: 15px;
   color: #ffffff;
@@ -120,12 +124,14 @@ body {
   padding-top: 20px; 
   text-decoration: none;
   font-family: sans-serif;
-  background-color: #1f84d6;
+  background-color: #31383b;
   border: none;
   box-shadow: 3px 3px 3px #b1b1b1,
         -3px -3px 3px #fff;
 }
-   
+.link:hover{
+  background-color: black;
+}
 </style>
 
 </head>
@@ -135,7 +141,7 @@ body {
         <div class="form-input">
             <div class="model_div">
               <h3>Delete Model</h3>
-              <input type="text" name="model_id" id="model_id" placeholder="Enter Model ID...">
+              <input type="text" name="model_id" id="model_id" placeholder="Enter Model ID..." required>
             </div>
             <div class="model_div">
                 <button class="btn" type="submit">Delete</button>

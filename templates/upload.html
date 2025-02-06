@@ -47,7 +47,7 @@ body {
   width:65%;
   height:35px;
   text-align:center;
-  background:#1f84d6;
+  background:#3a4144;
   color:#fff;
   font-size:13px;
   padding: 10px 10px 0px 10px;
@@ -60,7 +60,7 @@ body {
         -3px -3px 3px #fff;
 }
 .form-input label:hover{
-    background-color: #1571bd;
+    background-color: #000000;
 }
 
 .form-input img {
@@ -83,17 +83,18 @@ body {
 }
 .model_div h3{
   font-family: sans-serif;
-  color: #6e6e6e;
+  color: #505050;
   font-size: 25px;
 }
 
 #model_link{
   width: 90%;
-  height: 5vh;
+  height: 3vh;
   display: block;
-  border-radius: 15px;
-  border: 2px solid #065c9e;    
+  border-radius: 8px;
+  border: 1px solid #1a1c1d;    
   box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+  padding: 5px 10px;
 }
 .btn{
   width: 80%;
@@ -101,18 +102,21 @@ body {
   margin-top: 20%;
   border-radius: 15px;
   color: #ffffff;
-  background-color: #1f84d6;
+  background-color: #31383b;
   border: none;
+  cursor: pointer;
   box-shadow: 3px 3px 3px #b1b1b1,
         -3px -3px 3px #fff;
 }
+.btn:hover{
+  background-color: #000000;
+}
 .btn:active{
   background-color: #043357;  
-  
 }
 .link{
   width: 80%;
-  height: 40px;
+  height: 35px;
   margin-top: 20%;
   border-radius: 15px;
   color: #ffffff;
@@ -120,10 +124,13 @@ body {
   padding-top: 20px; 
   text-decoration: none;
   font-family: sans-serif;
-  background-color: #1f84d6;
+  background-color: #e43434;
   border: none;
   box-shadow: 3px 3px 3px #b1b1b1,
         -3px -3px 3px #fff;
+}
+.link:hover{
+  background-color: red;
 }
    
 </style>
@@ -140,9 +147,9 @@ body {
             <input type="file" name = "model_img" id="file-ip-1" accept="image/*" onchange="showPreview(event);">
             <div class="model_div">
               <h3>Model</h3>
-              <input type="text" name="model_name" id="model_link" placeholder="Model Name Here...">
+              <input type="text" name="model_name" id="model_link" placeholder="Model Name Here..." required>
               <br>
-              <input type="text" name="model_url" id="model_link" placeholder="Paste Link Here...">
+              <input type="text" name="model_url" id="model_link" placeholder="Paste Link Here..." required>
             </div>
             <div class="model_div">
                 <button class="btn" type="submit">SUBMIT</button>
