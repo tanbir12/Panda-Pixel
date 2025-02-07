@@ -4,6 +4,9 @@
 import os
 from flask import Flask , render_template , request , redirect ,url_for
 from flask_sqlalchemy import SQLAlchemy
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 app = Flask(__name__)
 
 # _________________________________________________________________Youtube Data Api__________________________________________________________________
@@ -23,6 +26,10 @@ Username = os.getenv('Admin')
 Password = os.getenv('Password')
 api_key = os.getenv('API_KEY')
 
+sender_email = os.getenv('senderEmail')
+sender_password = os.getenv('senderSecret')
+recipient_email = os.getenv('adminEmail')
+        
 #++++++++++++++++++++++++++++ DATABASE AREA ++++++++++++++++++++++++++++++++++++++
 db = SQLAlchemy(app)
 
@@ -207,6 +214,39 @@ def Delete_model():
 
 
     return render_template('delete.html')
+
+
+# +++++++++++++++++++++++++++++++++++++++  Mail Sending Route  ++++++++++++++++++++++++++++++++++++++++++++++++++
+@app.route('/sendEmail',methods = ['GET','POST'])
+def Send_Email():
+    if request.method == "POST":
+        Name = request.form.get('senderName')
+        Email = request.form.get('senderEmail')
+        Text = request.form.get('senderText')
+
+        subject = "Panda Pixels Website Mail"
+        body = "<<--!!  This Mail is Autometically Generated from Panda Pixels Website.  !!-->>\n\n"+ f"From : {Email} \nSender Name : {Name} \n\n" +Text
+
+        msg = MIMEMultipart()
+        msg['From'] = sender_email
+        msg['To'] = recipient_email
+        msg['Subject'] = subject
+        msg.attach(MIMEText(body, 'plain'))
+
+        try:
+            server = smtplib.SMTP('smtp.gmail.com', 587)
+            server.starttls()
+            server.login(sender_email, sender_password)
+            text = msg.as_string()
+            server.sendmail(sender_email, recipient_email, text)
+            server.quit()
+            return render_template('successful.html')
+        except Exception as e:
+            return f"Error: {e}"
+
+
+
+
 
 
 if __name__=="__main__":
