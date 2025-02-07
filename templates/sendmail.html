@@ -163,14 +163,14 @@
         <form class="p-3 mt-3" method="post" action="/sendEmail">
             <div class="form-field d-flex align-items-center">
                 <span class="far fa-user"></span>
-                <input type="text" name="userName" id="userName" placeholder="Full Name" required>
+                <input type="text" name="userName" id="senderName" placeholder="Full Name" required>
             </div>
             <div class="form-field d-flex align-items-center">
                 <span class="fas fa-key"></span>
-                <input type="email" name="password" id="pwd" placeholder="Email Address" required>
+                <input type="email" name="senderEmail" id="pwd" placeholder="Email Address" required>
             </div>
             <div class="form-field d-flex align-items-center">
-                <textarea name="" id="textField" placeholder="Something For Us...." required></textarea>
+                <textarea name="senderText" id="textField" placeholder="Something For Us...." required></textarea>
             </div>
             <button type="submit" class="btn mt-3">Send Message</button>
         </form>
