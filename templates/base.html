@@ -134,54 +134,17 @@ crossorigin="anonymous"></script>
         <div class="row">
             <div class="col-lg-4 col-md-4">
                 <div class="widget clearfix">
-                    <h3 class="widget-title">Connect with Email.</h3>
+                    <h3 class="widget-title">For Business & Collabs</h3>
                     <div class="newsletter-widget">
-                        <p>You can send E-mails using this box.<br> Click Here To Send Message.</p>
+                        <p>You can send Emails using this box.<br> Click Here To Send Message.</p>
                         <form class="form-inline" role="search">
                             <div class="form-1">
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" ><ion-icon name="rocket-outline"></ion-icon></button>
+                                <a href="/sendEmail" class="btn btn-primary" ><ion-icon name="rocket-outline"></ion-icon></a>
                             </div>
                         </form>
                     </div><!-- end newsletter -->
                 </div><!-- end widget -->
             </div><!-- end col -->
-
-            <!-- Email Sending Form  -->
-            <form action="/sendEmail" method="post">
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="margin-top: 0px;">
-                  <div class="modal-dialog modal-dialog-centered" role="document" style='color:white; border: 1px solid aqua; border-radius: 8px; overflow-x: hidden; box-shadow: 2px 10px 30px rgb(92, 111, 119); padding: 10px 10px;background-color: rgb(31, 31, 31);'>
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel" style="color:white; font-size: 28px;">Send Email</h5>
-                        <button type="button" class="close" data-dismiss="modal">
-                          <span style="color: aqua; font-size: 28px;">+</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        <form>
-                          <div class="form-group">
-                            <label class="col-form-label">Name :</label>
-                            <input type="text" name="senderName" class="form-control" id="recipient-name" style="background-color: rgb(54, 54, 54); font-style: normal !important; font-family: sans-serif; border-radius: 8px; height: 5vh; padding: 5px 10px;" placeholder="Your Name" required>
-                          </div>
-                          <div class="form-group">
-                            <label for="recipient-name" class="col-form-label">Mail_ID :</label>
-                            <input type="text" name="senderEmail" class="form-control" id="recipient-name" style="background-color: rgb(54, 54, 54); border-radius: 8px; height: 5vh; padding: 5px 10px;" placeholder="Your Mail ID" required>
-                          </div>
-                          <div class="form-group">
-                            <label for="message-text" class="col-form-label">Message :</label>
-                            <textarea name="senderText" class="form-control" id="message-text" style="background-color: rgb(54, 54, 54); font-style: normal !important; font-family: sans-serif; padding: 5px 10px; border-radius: 8px; max-width: 100%;" placeholder="Something For Us....." required></textarea>
-                          </div>
-                        </form>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal" style="color: rgb(32, 121, 148) !important; border-radius: 8px;">Close</button>
-                        <button type="submit" class="btn btn-primary" style="border-radius: 8px;">Send message</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </form>
-              
 
 
 

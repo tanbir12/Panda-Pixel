@@ -244,7 +244,7 @@ def Send_Email():
         except Exception as e:
             return f"Error: {e}"
 
-
+    return render_template('sendmail.html')
 
 
 
